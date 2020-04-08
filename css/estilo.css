@@ -1,0 +1,53 @@
+.containerHeader {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    /*border: 1px solid #000;*/
+}
+
+.container01 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    /*border: 1px solid #000;*/
+}
+
+.containerMain2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    /*border: 1px solid #000;*/
+}
+
+.title01 {
+    color: #0085BF;
+    font-weight: bolder;
+}
+
+.box01 {
+    width: 100%;
+    /*border:1px solid rebeccapurple;*/
+    padding: 1rem;
+}
+
+.box02 {
+    width: 100%;
+    /*border:1px solid red;*/
+    padding: 1rem;
+}
+
+.container02 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    /*border: 1px solid #000;*/
+}
+
+.corona-copyright {
+    display: none!important;
+}
+
+.corona-card .corona-header h2 {
+    background: #333!important;
+    color: #fff!important;
+}
