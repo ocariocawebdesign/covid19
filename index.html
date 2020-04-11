@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/metro4/build/css/metro-all.min.css" />
     <link rel="stylesheet" href="css/estilo.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pt-br.js"></script>
 </head>
@@ -25,7 +27,7 @@
         <div class="container">
 
             <div class="">
-                <div class=" container">
+                <div class="container">
                     <div class="row">
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -77,7 +79,7 @@
                 const now = moment();
                 const lastSmoked = moment(LAST_SMOKED_DATE_INPUT.value)
                 const diff = now.diff(lastSmoked, 'days');
-
+                //const diff = now.diff(lastSmoked, 'months');
                 RESULT.value = `Você está á ${diff} dias limpo!`;
 
                 if (lastSmoked >= 365) {

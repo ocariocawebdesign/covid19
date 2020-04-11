@@ -1,8 +1,14 @@
-
-header{
- margin-top:1rem;
+body {
+    font-family: 'Nunito', sans-serif;
 }
 
+header {
+    margin-top: 1rem;
+}
+
+h1 {
+    color: #0085BF;
+}
 
 h4 {
     color: #0085BF;
@@ -82,7 +88,6 @@ input[type="date"] {
     color: #fff!important;
 }
 
-
 /*Media Queries*/
 
 @media (min-width: 320px) and (max-width:568px) {
@@ -153,11 +158,6 @@ input[type="date"] {
         color: #fff!important;
     }
 }
-
-
-
-
-
 
 @media (min-width: 360px) and (max-width:640px) {
     input[type="textarea"] {
