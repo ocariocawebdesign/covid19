@@ -18,6 +18,8 @@
 
 <body>
 
+
+
     <header>
 
         <div class="container">
@@ -70,21 +72,23 @@
             </div>
         </div>
 
+        <script>
+            const calc = () => {
+                const now = moment();
+                const lastSmoked = moment(LAST_SMOKED_DATE_INPUT.value)
+                const diff = now.diff(lastSmoked, 'days');
+
+                RESULT.value = `Você está á ${diff} dias limpo!`;
+
+                if (lastSmoked >= 365) {
+                    console.log("Parabéns! Você está a mais de 1 no sem fumar!");
+                }
+            };
+        </script>
+
+
     </header>
 
-    <script>
-        const calc = () => {
-            const now = moment();
-            const lastSmoked = moment(LAST_SMOKED_DATE_INPUT.value)
-            const diff = now.diff(lastSmoked, 'days');
-
-            RESULT.value = `Você está á ${diff} dias limpo!`;
-
-            if (lastSmoked >= 365) {
-                console.log("Parabéns! Você está a mais de 1 no sem fumar!");
-            }
-        }
-    </script>
 
     <div class="container" style="padding: 2rem;">
         <h1 class="text-center title01">Dicas para lidar com o COVID-19</h1>
@@ -250,7 +254,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">
                                 </h5>
-                                <article><strong>Da Silva</strong>, vem  aprendendo a valorizar o tempo com as coisas simples.</article>
+                                <article><strong>Da Silva</strong>, vem aprendendo a valorizar o tempo com as coisas simples.</article>
                                 <cite><h6 class="text-bold">"Comer, dormir, namorar, arrumar as coisas da casa, ver filmes e ler coisas"</h6></cite>
                                 <p class="card-text">
                                 </p>
