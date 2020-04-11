@@ -79,6 +79,80 @@ input[type="date"] {
 
 /*Media Queries*/
 
+@media (min-width: 320px) and (max-width:568px) {
+    input[type="textarea"] {
+        width: 90%;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+    }
+    input[type="date"] {
+        width: 100%;
+        color: #0085BF;
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .botao {
+        width: 45%;
+    }
+    .containerHeader {
+        display: block;
+        width: 100%;
+        /*grid-template-columns: 50% 50%;
+        grid-template-rows: auto;*/
+        /*border: 1px solid #000;*/
+    }
+    .container01 {
+        display: block;
+        width: 100%;
+        /*grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        /*border: 1px solid #000;*/
+    }
+    .containerMain2 {
+        display: block;
+        width: 100%;
+        /*grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        /*border: 1px solid #000;*/
+    }
+    .title01 {
+        color: #0085BF;
+        font-weight: bolder;
+    }
+    .box01 {
+        width: 100%;
+        /*border:1px solid rebeccapurple;*/
+        padding: 1rem;
+    }
+    .box02 {
+        width: 100%;
+        /*border:1px solid red;*/
+        padding: 1rem;
+    }
+    .container02 {
+        display: block;
+        width: 100%;
+        /*grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        /*border: 1px solid #000;*/
+    }
+    .corona-copyright {
+        display: none!important;
+    }
+    .corona-card .corona-header h2 {
+        background: #333!important;
+        color: #fff!important;
+    }
+}
+
+
+
+
+
+
 @media (min-width: 360px) and (max-width:640px) {
     input[type="textarea"] {
         width: 90%;
