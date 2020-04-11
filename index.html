@@ -2,131 +2,181 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/metro4/build/css/metro-all.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/metro4/build/css/metro-all.min.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pt-br.js"></script>
 </head>
 
 <body>
-
-
     <header>
 
+        <style>
+
+        </style>
+
+        <div class="container">
+
+            <div class="">
+                <div class=" container">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <h4>Quantos dias você está limpo?</h4>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Coloque a data em que você parou de usar drogas.</h5>
+                                    <p class="card-text"></p>
+                                    <form action="">
+                                        <input id="LAST_SMOKED_DATE_INPUT" type="date" placeholder="Digite a data da última vez que fumou" />
+                                        <br>
+                                        <br>
+
+                                        <a href="#" onclick="calc()" class=" botao btn btn-primary">Calcular</a>
+
+                                        <br>
+                                        <br>
+                                        <input type="textarea" id="RESULT" rows="5"></input>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2></h2>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text"></p>
+
+                                </div>
+                            </div>
+                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const calc = () => {
+                const now = moment();
+                const lastSmoked = moment(LAST_SMOKED_DATE_INPUT.value)
+                const diff = now.diff(lastSmoked, 'days');
+
+                RESULT.value = `Você está á ${diff} dias sem fumar.`;
+
+                if (lastSmoked >= 365) {
+                    console.log("Parabéns! Você está a mais de 1 no sem fumar!");
+                }
+            }
+        </script>
 
 
 
     </header>
 
-    <div class="container" style="padding: 5rem;">
-
+    <div class="container" style="padding: 2rem;">
         <h1 class="text-center title01">Dicas para lidar com o COVID-19</h1>
-        <span style="font-size:100px; color:red; margin: 10px 10px 10px 50%" class="mif-heart ani-heartbeat"></span>
+        <span style="font-size: 100px; color: red; margin: 10px 10px 10px 50%;" class="mif-heart ani-heartbeat"></span>
 
+        <div class="container01">
+            <div class="box01">
+                <img class="img-fluid" src="imagens/medical01.png" alt="" />
+            </div>
 
-    </div>
-
-
-
-    <div class="container01">
-
-        <div class="box01">
-            <img class="img-fluid" src="imagens/medical01.png" alt="">
-
+            <div class="box02">
+                <h2>Dicas e cuidados para prevenção do Coronavírus</h2>
+                <p class="text-leader2">
+                    As principais recomendações incluem bons hábitos de higiene, diante disso, a Organização Mundial de Saúde (OMS) divulgou documento com dicas e dúvidas mais comuns para se proteger da doença. Segundo o Ministério da Saúde, o coronavírus é transmitido de
+                    diversas maneiras. As principais formas são pelo ar ou por contato pessoal com secreções contaminadas — saliva, tosse e espirro —, contato pessoal próximo, com objetos ou superfícies contaminadas e contato com a boca, nariz ou olhos,
+                    daí a importância da higienização adequada das mãos. Confira alguns dicas:
+                </p>
+            </div>
         </div>
 
-        <div class="box02">
-            <h2>Dicas e cuidados para prevenção do Coronavírus</h2>
-            <p class="text-leader2">As principais recomendações incluem bons hábitos de higiene, diante disso, a
-                Organização Mundial de Saúde (OMS) divulgou documento com dicas e dúvidas mais comuns para se proteger
-                da doença. Segundo o Ministério da Saúde, o coronavírus é transmitido de diversas maneiras. As
-                principais formas são pelo ar ou por contato pessoal com secreções contaminadas — saliva, tosse e
-                espirro —, contato pessoal próximo, com objetos ou superfícies contaminadas e contato com a boca, nariz
-                ou olhos, daí a importância da higienização adequada das mãos. Confira alguns dicas: </p>
-        </div>
-    </div>
+        <div class="container02">
+            <div class="box01">
+                <h2>Medidas de higiene pessoal ajudam a prevenir do coronavírus</h2>
+                <p class="text-leader2">
+                    Ele é transmitido por gotículas de saliva e catarro que se espalham pelo ambiente. Até por isso, a principal forma de prevenção é lavar as mãos com água e sabão frequentemente, em especial após tossir, espirrar, ir ao banheiro e mexer com animais. Ter
+                    um frasco de álcool gel na bolsa também é indicado. Ao adotar essa estratégia, evita-se que o vírus acesse seu organismo após você colocar as mãos em uma superfície contaminada. A mesma medida, aliás, vale para afastar o risco de gripe
+                    e outras tantas infecções.
+                </p>
+            </div>
 
-    <div class="container02">
-
-        <div class="box01">
-            <h2>Medidas de higiene pessoal ajudam a prevenir do coronavírus</h2>
-            <p class="text-leader2">Ele é transmitido por gotículas de saliva e catarro que se espalham pelo ambiente.
-                Até por isso, a principal forma de prevenção é lavar as mãos com água e sabão frequentemente, em
-                especial após tossir, espirrar, ir ao banheiro e mexer com animais. Ter um frasco de álcool gel na bolsa
-                também é indicado. Ao adotar essa estratégia, evita-se que o vírus acesse seu organismo após você
-                colocar as mãos em uma superfície contaminada. A mesma medida, aliás, vale para afastar o risco de gripe
-                e outras tantas infecções.</p>
-
+            <div class="box02">
+                <img class="img-fluid" src="imagens/medical02.png" alt="" />
+            </div>
         </div>
 
-        <div class="box02">
+        <div class="container" id="coronavirus-container"></div>
 
-            <img class="img-fluid" src="imagens/medical02.png" alt="">
-        </div>
-    </div>
-
-
-
-
-    <div class="container" id="coronavirus-container"></div>
-
-    <div class="containerMain2">
-
-        <div class="box01">
-            <!--<img class="thumbnail" src="imagens/logo-only.png" alt="">-->
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="" class="card-img" alt="">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ministro da Saúde volta a condenar enxurrada de fake news sobre
-                                coronavírus</h5>
-                            <p class="card-text"> O ministro da Saúde, Luiz Henrique Mandetta, voltou a condenar a
-                                enxurrada de fake news nas redes sociais sobre a doença e a atuação do Ministério da
-                                Saúde. Mandetta reafirmou que as informações seguras são fundamentais no combate ao
-                                coronavírus. </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="containerMain2">
+            <div class="box01">
+                <!--<img class="thumbnail" src="imagens/logo-only.png" alt="">-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="" class="card-img" alt="" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Ministro da Saúde volta a condenar enxurrada de fake news sobre coronavírus
+                                </h5>
+                                <p class="card-text">
+                                    O ministro da Saúde, Luiz Henrique Mandetta, voltou a condenar a enxurrada de fake news nas redes sociais sobre a doença e a atuação do Ministério da Saúde. Mandetta reafirmou que as informações seguras são fundamentais no combate ao coronavírus.
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <br>
-            <!--<img class="thumbnail" src="imagens/logo-only.png" alt="">-->
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="" class="card-img" alt="">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Ministro da Saúde volta a condenar enxurrada de fake news sobre
-                                coronavírus</h5>
-                            <p class="card-text"> O ministro da Saúde, Luiz Henrique Mandetta, voltou a condenar a
-                                enxurrada de fake news nas redes sociais sobre a doença e a atuação do Ministério da
-                                Saúde. Mandetta reafirmou que as informações seguras são fundamentais no combate ao
-                                coronavírus. </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <br />
+                <br />
+                <!--<img class="thumbnail" src="imagens/logo-only.png" alt="">-->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="" class="card-img" alt="" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Ministro da Saúde volta a condenar enxurrada de fake news sobre coronavírus
+                                </h5>
+                                <p class="card-text">
+                                    O ministro da Saúde, Luiz Henrique Mandetta, voltou a condenar a enxurrada de fake news nas redes sociais sobre a doença e a atuação do Ministério da Saúde. Mandetta reafirmou que as informações seguras são fundamentais no combate ao coronavírus.
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <div class="box02" style="background:fixed;">
-            <!--<img class="thumbnail" src="imagens/ocarioca-ilustracao-1.png" width="180" height="80" alt="">-->
-            <a class="twitter-timeline" href="https://twitter.com/Covid19__Brasil?ref_src=twsrc%5Etfw">Tweets by
-                Covid19__Brasil</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
+            <div class="box02" style="background: fixed;">
+                <!--<img class="thumbnail" src="imagens/ocarioca-ilustracao-1.png" width="180" height="80" alt="">-->
+                <a class="twitter-timeline" href="https://twitter.com/Covid19__Brasil?ref_src=twsrc%5Etfw">Tweets by Covid19__Brasil</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
     </div>
 
@@ -137,8 +187,7 @@
     </footer>
     <!--API KEY o Google
         AIzaSyBv4mrCmNnj-H-G3o-DYwLvqtW7KOQkWHo-->
-    <script
-        src='https://vitaminasprime.com/statistics/share/corona?container=coronavirus-container&google_key=AIzaSyBv4mrCmNnj-H-G3o-DYwLvqtW7KOQkWHo'></script>
+    <script src="https://vitaminasprime.com/statistics/share/corona?container=coronavirus-container&google_key=AIzaSyBv4mrCmNnj-H-G3o-DYwLvqtW7KOQkWHo"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="node_modules/metro4/build/js/metro.min.js"></script>
 </body>
