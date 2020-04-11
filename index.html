@@ -78,7 +78,7 @@
             const lastSmoked = moment(LAST_SMOKED_DATE_INPUT.value)
             const diff = now.diff(lastSmoked, 'days');
 
-            RESULT.value = `Você está á ${diff} dias sem fumar.`;
+            RESULT.value = `Você está á ${diff} dias limpo!`;
 
             if (lastSmoked >= 365) {
                 console.log("Parabéns! Você está a mais de 1 no sem fumar!");
